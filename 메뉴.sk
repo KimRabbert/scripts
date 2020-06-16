@@ -1,0 +1,17 @@
+command /메뉴:
+	trigger:
+		open chest with 6 rows named "서버 메뉴" to player
+		format slot 19 of player with clock named "스폰" with lore "클릭하면 스폰으로 가집니다" to close then run [execute console command "/spawn %player%"]
+		format slot 21 of player with grass named "야생" with lore "클릭하면 야생으로 가집니다" to close then run [execute console command "/warp wild %player%"]
+		format slot 23 of player with wheat named "농장" with lore "클릭하면 농장으로 가집니다" to close then run [execute console command "/warp farm %player%"]
+		format slot 25 of player with nether star named "상점" with lore "클릭하면 상점으로 가집니다" to close then run [execute console command "/warp store %player%"]
+		format slot 40 of player with green wool named "땅 현황" with lore "클릭하면 땅 현황을 확인할 수 있는 곳으로 가집니다" to close then run [execute console command "/warp ground %player%"]
+		
+		#format slot 2 of player with purple concrete named "토끼팀" to close then run [execute console command "/warp rabbit %player%"]
+		#format slot 4 of player with orange concrete named "강아지팀" to close then run [execute console command "/warp puppy %player%"]
+		#format slot 6 of player with green concrete named "공룡팀" to close then run [execute console command "/warp dinosour %player%"]	
+		
+on swap hand items:
+	if event-player is sneaking:
+		cancel event
+		execute player command "/메뉴"

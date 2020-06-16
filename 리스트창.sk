@@ -1,0 +1,6 @@
+on join:
+	set tab header to "&a땅따먹기 서버 %nl%" and footer to " %nl% &d현재 접속자&f : %number of all players% %nl% &b현재 시각 &f: %now%" for player
+
+on every 2 seconds:
+	loop all players:
+		set tab header to "&a땅따먹기 서버 %nl%" and footer to " %nl% &d현재 접속자&f : %number of all players% %nl% &b현재 시각 &f: %now%" for loop-player 

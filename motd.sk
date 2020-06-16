@@ -1,0 +1,2 @@
+on server list ping:
+	set motd to "&a땅따먹기 서버"
